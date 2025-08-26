@@ -11,17 +11,26 @@
         color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
         device-orientation-permission-ui="enabled: false">
 
+        <a-assets>
+            <a-asset-item id="japan" src="./assets/models/CharacterAnimated.glb"></a-asset-item>
+            <a-asset-item id="mexic" src="./assets/models/aguila.glb"></a-asset-item>
+        </a-assets>
+
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
+        <!-- Target 0 -->
         <a-entity mindar-image-target="targetIndex: 0">
-            <!-- Cubo simple -->
-            <a-box position="0 0.1 0" depth="0.2" height="0.2" width="0.2" color="green"></a-box>
+            <a-gltf-model id="myModel" src="#japan" scale="0.5 0.5 0.5" animation-mixer></a-gltf-model>
+            <a-text value="Apoco si muy onichan" position="0 -0.6 0" color="white" width="2"></a-text>
+        </a-entity>
 
-            <!-- Texto flotante -->
-            <a-text value="¡Has escaneado la imagen!" color="#FFF" position="0 0.5 0" width="1.5">
-            </a-text>
+        <!-- Target 1 -->
+        <a-entity mindar-image-target="targetIndex: 1">
+            <a-gltf-model rotation="0 0 0 " position="0 0.1 0" scale="1 1 1" src="#mexic"></a-gltf-model>
+            <a-text value="Viva mexico kbrones" position="0 -0.6 0" color="yellow" width="2"></a-text>
         </a-entity>
     </a-scene>
+    <script src="scanner.js"></script>
 </body>
 
 </html>
