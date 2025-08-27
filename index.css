@@ -6,13 +6,16 @@
     --color5: #474A4A;
     --fuente: 'Roboto', sans-serif;
 }
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: var(--color4);
     font-family: var(--fuente);
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -21,24 +24,26 @@ html, body {
     height: 100dvh;
     background-color: var(--color4);
 }
-.container .icono{
+
+.container .icono {
     background-color: var(--color2);
     padding: 12%;
     border-radius: 20%;
 }
 
-.icono i{
+.icono i {
     width: 100%;
     height: auto;
     color: var(--color4);
 }
 
-.info{
+.info {
     color: var(--color5);
     text-align: center;
     margin: 5%;
 }
-.info button{
+
+.info button {
     background-color: var(--color2);
     color: var(--color4);
     border: none;
@@ -48,3 +53,4 @@ html, body {
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
 }
+
